@@ -8,9 +8,11 @@ In [WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagrid)
 
 ### C#
 ```c#
+this.sfDataGrid.CurrentCellBeginEdit += sfDataGrid1_CurrentCellBeginEdit;
 this.sfDataGrid.CurrentCellEndEdit += sfDataGrid1_CurrentCellEndEdit;
  
 System.Diagnostics.Process process;
+
 void sfDataGrid1_CurrentCellBeginEdit(object sender, CurrentCellBeginEditEventArgs e)
 {
     process = System.Diagnostics.Process.Start("Osk.exe");
@@ -28,6 +30,7 @@ AddHandler Me.sfDataGrid.CurrentCellBeginEdit, AddressOf sfDataGrid1_CurrentCell
 AddHandler Me.sfDataGrid.CurrentCellEndEdit, AddressOf sfDataGrid1_CurrentCellEndEdit
  
 Private process As System.Diagnostics.Process
+
 Private Sub sfDataGrid1_CurrentCellBeginEdit(ByVal sender As Object, ByVal e As CurrentCellBeginEditEventArgs)
     process = System.Diagnostics.Process.Start("Osk.exe")
 End Sub
